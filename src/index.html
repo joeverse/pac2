@@ -13,54 +13,131 @@
         <title>Teatre El Sol</title>
     </head>
     <body>
-        <header>
-            <i class="fas fa-theater-masks"></i>
-            <div class="menu">
+        <header class="site-header">
+            <div>
+                <i class="fas fa-theater-masks fa-3x logo"></i>
+            </div>
+            <div class="nav_menu">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
-                      <a class="navbar-brand" href="#">Navbar</a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                          </li>
-                        </ul>
-                      </div>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav"
+                            aria-controls="navbarNav"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link active"
+                                        aria-current="page"
+                                        href="#"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html"
+                                        >About</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog.html"
+                                        >Blog</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html"
+                                        >Contact</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                  </nav>
-            </div>     
+                </nav>
+            </div>
         </header>
-        <main>                        
-            <img
-                src="./assets/images/teatre.jpg"
-                alt="Teatre el Sol"
-            />
+        <main class="poster">
+            <img src="./assets/images/teatre.jpg" alt="Teatre el Sol" />
             <h1>Teatre el Sol</h1>
-            <h2>Artist Spotlight</h2>
+            <h2>Teatre Valencià</h2>
             <hr />
-            <i class="fas fa-university"></i>
+
             <p class="about">
-                Teatre el Sol és un grup de teatre de barri que va néixer l'any 1991 al barri del cabanyal, a València.
-                Des d'aquell any fins dia d'avui continuem preparant funcions perquè és el que ens apassiona.
+                Teatre el Sol és un grup de teatre de barri que va néixer l'any
+                1991 al barri del cabanyal, a València. Des d'aquell any fins
+                dia d'avui continuem preparant funcions perquè és el que ens
+                apassiona.
             </p>
-            <a href="javascript:void(0)">Read more</a>
-            
+
             <div class="location">
                 <p>25/04/2022 València<br />Palau de Congressos</p>
             </div>
         </main>
+        <footer>
+            <!-- Footer main -->
+            <section class="ft-main">
+                <div class="ft-main-item">
+                    <h2 class="ft-title">Nosaltres</h2>
+                    <ul>
+                        <li><a href="#">Història</a></li>
+                        <li><a href="#">Actuacions</a></li>
+                        <li><a href="#">Integrants</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <h2 class="ft-title">Recursos</h2>
+                    <ul>
+                        <li><a href="#">Panflets</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Fotos</a></li>
+                        <li><a href="#">Gires</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-item">
+                    <h2 class="ft-title">Contacte</h2>
+                    <ul>
+                        <li><a href="#">Ajuda</a></li>
+                        <li><a href="#">Contractació</a></li>
+                        <li><a href="#">Publicitat</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Footer End -->
+            <section class="ft-end">
+                <ul class="ft-end-list">
+                    <li><i class="fas fa-theater-masks fa-3x logo"></i></li>
+                    <li>
+                        <ul class="ft-social-list">
+                            <li>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </footer>
         <script type="module" src="./assets/scripts/main.js"></script>
         <!-- do not remove this line! -->
     </body>

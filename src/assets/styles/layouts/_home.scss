@@ -19,8 +19,12 @@ body {
 
 // Basic styles and layout
 
+.logo {
+  padding-left: 0.5em;
+  color: $uoc-masterbrand;
+}
 
-main {
+.poster {
   max-width: 145em;
   margin: 0 auto;
   position: relative;
@@ -28,7 +32,7 @@ main {
 }
 
 _:-ms-input-placeholder,
-:root main {
+:root .poster {
   display: block;
 }
 
@@ -84,23 +88,113 @@ button {
   bottom: 1em;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer {
+  background-color: $uoc-bg;
+  color: $text;
+  line-height: 1.5;
+}
+footer a {
+  text-decoration: none;
+  color: $text;
+}
+a:hover {
+  text-decoration: underline;
+}
+.ft-title {
+  color: $text;
+  font-family: "Merriweather", serif;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+/*  footer to bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+}
+/* Footer main */
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 29.8125rem /* 477px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 77.5rem /* 1240px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+
+/* Footer social */
+.ft-social {
+  padding: 0 1.875rem 1.25rem;
+}
+.ft-social-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.25rem;
+}
+.ft-social-list li {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+/* Footer end */
+
+.ft-end-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ft-end-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+/* one before the last child */
+.ft-end-list li:nth-last-child(2) {
+  flex: 1;
+}
+
 // Grid layout for wide display
 @supports (display: grid) {
   @media (min-width: 42em) and (min-height: 27em) {
-
-    header {
-      grid-column: 4 / 6;
-      grid-row: 2 / 2;
-      z-index: 2;
-    }
-
-    .menu {
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background: rgba(201, 255, 252, 0.801);
-      grid-row: 3 / 3;
-      color: rgb(233, 48, 48);
     }
 
-    main {
+    .logo {
+      padding-left: 1em;
+      color: $uoc-masterbrand;
+    }
+
+    .nav_menu {
+      padding-right: 1em;
+    }
+
+    .poster {
       max-width: none;
       padding: 0;
       display: grid;
@@ -112,7 +206,7 @@ button {
 
     h1 {
       grid-column: 4 / 6;
-      grid-row: 2 / 3;
+      grid-row: 1 / 3;
       z-index: 2;
       padding-left: 0.25em;
       margin-bottom: initial;
@@ -138,8 +232,8 @@ button {
       grid-column: 5 / 6;
       grid-row: 2;
       align-self: end;
-      padding-bottom: 4vh;
-      margin-bottom: initial;
+      //padding-bottom: 4vh;
+      //margin-bottom: initial;
     }
 
     a {
@@ -181,6 +275,95 @@ button {
       grid-row: 4 / 5;
       position: initial;
       padding: 0;
+    }
+    * {
+      box-sizing: border-box;
+      font-family: "Lato", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    footer {
+      background-color: $uoc-bg;
+      color: $text;
+      line-height: 1.5;
+    }
+    footer a {
+      text-decoration: none;
+      color: $text;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .ft-title {
+      color: $text;
+      font-family: "Merriweather", serif;
+      font-size: 1.375rem;
+      padding-bottom: 0.625rem;
+    }
+    /* Sticks footer to bottom */
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    .container {
+      flex: 1;
+    }
+    /* Footer main */
+    .ft-main {
+      padding: 1.25rem 1.875rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media only screen and (min-width: 29.8125rem /* 477px */) {
+      .ft-main {
+        justify-content: space-evenly;
+      }
+    }
+    @media only screen and (min-width: 77.5rem /* 1240px */) {
+      .ft-main {
+        justify-content: space-evenly;
+      }
+    }
+    .ft-main-item {
+      padding: 1.25rem;
+      min-width: 12.5rem;
+    }
+
+    /* Footer social */
+    .ft-social {
+      padding: 0 1.875rem 1.25rem;
+    }
+    .ft-social-list {
+      display: flex;
+      justify-content: center;
+      padding-top: 1.25rem;
+    }
+    .ft-social-list li {
+      margin: 0.5rem;
+      font-size: 1.25rem;
+    }
+    /* Footer End */
+    .ft-end {
+      padding: 0.9375rem 1.875rem;
+      background-color: rgb(113, 129, 129);
+    }
+    .ft-end-list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .ft-end-list li {
+      margin: 0.125rem 0.625rem;
+      white-space: nowrap;
+    }
+    /* one before the last child */
+    .ft-end-list li:nth-last-child(2) {
+      flex: 1;
     }
   }
 

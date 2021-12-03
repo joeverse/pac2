@@ -1,0 +1,42 @@
+.teatre1 {
+  text-align: center;
+  padding: 50px;
+}
+
+.teatre2 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.blog_content {
+  margin: 1vh 10vh;
+}
+
+.box {
+  padding-top: 40px;
+}
+
+@media (min-width: 42em) and (min-height: 27em) {
+  .teatre1 {
+    height: 80vh;
+    padding: 50px;
+    object-fit: contain;
+  }
+
+  .teatre2 {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .blog_content {
+    margin: 3vh 40vh;
+    font-family: $font-family-serif;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    justify-content: space-between;
+  }
+}

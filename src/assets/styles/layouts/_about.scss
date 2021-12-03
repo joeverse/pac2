@@ -1,25 +1,86 @@
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: calc(1em + 0.5vw);
+  color: lighten($text, 50%);
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
 
+h5,
+h6 {
+  text-align: center;
+}
+
+.card-title2 {
+  color: rgb(123, 125, 126);
+}
+
+.card-text {
+  text-align: center;
+  font-size: calc(0.8em + 0.2vw);
+}
 
 .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.flex-container > div {
+  flex: 1 1 auto;
+  margin: 20px;
+}
+
+.flex-item {
+  background: rgb(255, 255, 255);
+  margin: 80px;
+  max-width: 150px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  height: auto;
+}
+
+.flex-item:before {
+  /* The psuedo-element's padding-top percentage is based on the element's width. */
+  padding-top: 100%;
+  content: "";
+  float: left;
+}
+
+@media (min-width: 42em) and (min-height: 27em) {
+  .flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+    margin: 80px;
   }
-  
+
+  .flex-container > div {
+    flex: 1 1 auto;
+    margin: 40px;
+  }
+
   .flex-item {
-    background: tomato;
+    background: rgb(255, 255, 255);
     margin: 80px;
     max-width: 150px;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
     height: auto;
+    flex-direction: column;
   }
-  
+
   .flex-item:before {
     /* The psuedo-element's padding-top percentage is based on the element's width. */
     padding-top: 100%;
-    content: '';
+    content: "";
     float: left;
   }
+}
