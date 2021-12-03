@@ -1,0 +1,25 @@
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+  }
+  
+  .flex-item {
+    background: tomato;
+    margin: 80px;
+    max-width: 150px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    height: auto;
+  }
+  
+  .flex-item:before {
+    /* The psuedo-element's padding-top percentage is based on the element's width. */
+    padding-top: 100%;
+    content: '';
+    float: left;
+  }
